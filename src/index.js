@@ -39,7 +39,7 @@ initializeDb(db => {
 
   // api router
   app.use("/", (req, res) => {
-    res.send("Welcome to the app ");
+    res.send("Welcome to the app New");
   });
   app.use("/api", api({ config, db }));
 
