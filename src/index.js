@@ -38,6 +38,9 @@ initializeDb(db => {
   //   app.use(middleware({ config, db }));
 
   // api router
+  app.use("/", (req, res) => {
+    res.send("Welcome to the app ");
+  });
   app.use("/api", api({ config, db }));
 
   app.server.listen(process.env.PORT || config.port, () => {
